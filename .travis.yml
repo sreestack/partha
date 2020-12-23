@@ -2,11 +2,11 @@ sudo: required
 service:
  - docker
 before_install:
-  - docker build -t sree1786/partha .
+  - docker build -t sreekanthkurapati/partha .
 script:
  - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
  - docker images # to verify image is build or not
- - docker push sree1786/partha
+ - docker push sreekanthkurapati/partha
 notifications:
  email:
    recipients:
